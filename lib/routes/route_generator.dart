@@ -4,6 +4,8 @@ import 'package:flutter_x_base/home/home.dart';
 import 'package:flutter_x_base/pages/profile/profile.dart';
 import 'package:get/get.dart';
 
+import '../helpers/not_found.dart';
+
 class RouteGenerator {
   //* Singleton logic
   RouteGenerator._privateConstructor();
@@ -23,6 +25,12 @@ class RouteGenerator {
       page: () => const MyProfilePage(),
     ),
   ];
+
+  //* Unknown Pages Route *//
+  static final unknownRoute = GetPage(
+    name: AppRoutes.notFound,
+    page: () => const NotFoundPage(),
+  );
 }
 
 class MyMiddleware extends GetMiddleware with AppBase {

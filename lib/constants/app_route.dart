@@ -7,6 +7,7 @@ class AppRoutes {
   }
 
   //* Pages Route *//
+  static const String notFound = '/notFound';
   static const String initial = '/'; //? Default set like this
   static const String home = '/home';
   static const String profile = '/profile';

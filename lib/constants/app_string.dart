@@ -19,6 +19,27 @@ class AppStrings {
   //* Hint message *//
   static const String hintEmail = 'Email address';
 
+  //* Dia Error Message *//
+  static const String errorDiaUnknown = 'UnKnown Exception!!!';
+  static const String errorDiaEx = 'Dio Exception: ';
+  static const String errorDiaReqCancel = 'Request cancellation';
+  static const String errorDiaConnectionTimeOut = 'Connection timed out';
+  static const String errorDiaResTimeOut = 'Response timeout';
+  static const String errorDiaReqTimeOut = 'Request timed out';
+  static const String errorDiaNoInternet = 'No internet connection';
+  static const String errorDiaWentWrong = 'Something went wrong';
+  static const String errorDiaBadReq = 'Bad request error';
+  static const String errorDiaUnAuth = 'Unauthorized';
+  static const String errorDiaServerRefuses = 'The server refuses to execute';
+  static const String errorDiaPageNotFound = 'Page not found';
+  static const String errorDiaReqNotAllowed = 'Request method not allowed';
+  static const String errorDiaInternalServer = 'Internal server error';
+  static const String errorDiaBadGateway = 'Bad gateway';
+  static const String errorDiaNoService = 'Service unavailable';
+  static const String errorDiaNoHttp = 'HTTP protocol request is not supported';
+  static const String errorDiaUnknownRes = 'Unknown response mistake';
+  static const String errorDiaResWentWrong = 'Oops response went wrong';
+
   //* Error Message *//
   static const String errorNetwork = 'No Internet';
   static const String errorNetworkMsg = 'Please check your internet connection';

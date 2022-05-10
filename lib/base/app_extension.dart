@@ -7,6 +7,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
 
+import '../constants/app_enum.dart';
+
 class AppPrint {
   //* Singleton logic
   AppPrint._privateConstructor();
@@ -21,11 +23,30 @@ class AppPrint {
     }
   }
 
-  static void getStaticPrint(dynamic e) {
+  static void getStaticPrint(dynamic e, {int printType = 1}) {
+    // 1 - Default, 2 - Request, 3 - Response
     if (!AppConstants.inProduction) {
-      developer.log('$e');
+      switch (printType) {
+        case 2:
+          printRequest(e);
+          break;
+        case 3:
+          printResponse(e);
+          break;
+        default:
+          developer.log('$e');
+          break;
+      }
     }
   }
+}
+
+void printRequest(dynamic text) {
+  developer.log('\x1B[36m$text\x1B[0m');
+}
+
+void printResponse(dynamic text) {
+  developer.log('\x1B[34m$text\x1B[0m');
 }
 
 class AppErrorPrint {
@@ -109,8 +130,52 @@ class ShowToast {
     return _instance;
   }
 
-  call(String msg) {
+  call(String msg, {int msgType = 1}) {
+    msg = (msg.toString().trim().isEmpty ||
+            msg.toString().trim().toLowerCase() == 'null')
+        ? AppStrings.errorDiaWentWrong
+        : msg.toString();
     Fluttertoast.cancel();
-    Fluttertoast.showToast(msg: msg);
+    Fluttertoast.showToast(
+        msg: msg,
+        gravity: ToastGravity.CENTER,
+        toastLength: Toast.LENGTH_SHORT,
+        textColor: Colors.white,
+        timeInSecForIosWeb: 1,
+        backgroundColor:
+            msgType == ToastType.error.value ? Colors.red : Colors.blueGrey);
+  }
+}
+
+class ValidString {
+  //* Singleton logic
+  ValidString._privateConstructor();
+  static final ValidString _instance = ValidString._privateConstructor();
+  factory ValidString() {
+    return _instance;
+  }
+
+  call(dynamic input) {
+    //* String is valid or not
+    //* if "not" return empty string
+    return input == null ||
+            input.toString().trim().isEmpty ||
+            input.toString().trim().toLowerCase() == 'null'
+        ? ''
+        : input.toString().trim();
+  }
+}
+
+class IsFieldEmpty {
+  //* Singleton logic
+  IsFieldEmpty._privateConstructor();
+  static final IsFieldEmpty _instance = IsFieldEmpty._privateConstructor();
+  factory IsFieldEmpty() {
+    return _instance;
+  }
+
+  call(dynamic input) {
+    //* Validate: field is empty or not
+    return input == null || input.toString().trim().isEmpty;
   }
 }

@@ -13,4 +13,9 @@ class AppConstants {
   static bool isIOS = Platform.isIOS;
   static const int appTransitionDuration = 300;
   static const int appDelayDuration = 500;
+  static const int appMediumDelayDuration = 200;
+  static const int appShortDelayDuration = 100;
+  static const int doubleClickPreventDelayDuration = appTransitionDuration;
+  static const appStoreUrl = '';
+  static const playStoreUrl = '';
 }
