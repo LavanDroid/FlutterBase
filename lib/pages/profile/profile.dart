@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_x_base/base/app_base.dart';
-import 'package:flutter_x_base/constants/app_string.dart';
+
+import '../../base/app_base.dart';
+import '../../constants/app_string.dart';
 
 class MyProfilePage extends StatefulWidget {
   const MyProfilePage({Key? key}) : super(key: key);

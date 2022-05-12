@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_x_base/base/app_base.dart';
-import 'package:flutter_x_base/constants/app_route.dart';
-import 'package:flutter_x_base/constants/app_string.dart';
 import 'package:get/get.dart';
+
+import '../base/app_base.dart';
+import '../constants/app_route.dart';
+import '../constants/app_string.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);

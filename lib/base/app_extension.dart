@@ -1,13 +1,13 @@
 import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_x_base/constants/app_constants.dart';
-import 'package:flutter_x_base/constants/app_string.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
 
+import '../constants/app_constants.dart';
 import '../constants/app_enum.dart';
+import '../constants/app_string.dart';
 
 class AppPrint {
   //* Singleton logic

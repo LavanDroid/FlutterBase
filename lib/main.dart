@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
 Widget screenUtils() {
   return MediaQuery(
-    data: MediaQueryData.fromWindow(WidgetsBinding.instance!.window),
+    data: MediaQueryData.fromWindow(WidgetsBinding.instance.window),
     child: ScreenUtilInit(
         designSize: const Size(360, 640),
         minTextAdapt: true,

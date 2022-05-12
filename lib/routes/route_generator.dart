@@ -1,10 +1,10 @@
-import 'package:flutter_x_base/base/app_base.dart';
-import 'package:flutter_x_base/constants/app_route.dart';
-import 'package:flutter_x_base/home/home.dart';
-import 'package:flutter_x_base/pages/profile/profile.dart';
 import 'package:get/get.dart';
 
+import '../base/app_base.dart';
+import '../constants/app_route.dart';
 import '../helpers/not_found.dart';
+import '../home/home.dart';
+import '../pages/profile/profile.dart';
 
 class RouteGenerator {
   //* Singleton logic
